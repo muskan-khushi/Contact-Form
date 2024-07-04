@@ -1,53 +1,95 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
 }
 
-.container {
-    width: 100%;
+body {
+    font-family: 'Outfit';
+    background: linear-gradient(#ffdad5, #fff7f9);
+}
+
+.contact-container {
     height: 100vh;
-    background: #001660;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
-form {
-    background: #ffffff;
+.contact-left {
     display: flex;
     flex-direction: column;
-    padding: 2vw 4vw;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
+    align-items: start;
+    gap: 20px;
 }
 
-form h3 {
-    color: #555;
-    font-weight: 800;
+.contact-left-title h2{
+   font-weight: 600;
+   color: #a363aa;
+   font-size: 40px;
+   margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #a363aa;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
-form input, form textarea {
-    border: 0;
-    margin: 10px 0;
-    padding: 20px;
+.contact-input {
+    width: 400px;
+    height: 50px;
+    border: none;
     outline: none;
-    background: #f5f5f5;
-    font-size: 16px;
+    padding: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
 }
 
-form button {
-    padding: 15px;
-    background: #ff5361;
+.contact-left textarea {
+    height: 140px;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+.contact-input:focus {
+    border: 2px solid #ff994f;
+}
+
+.contact-input::placeholder {
+    color: #a9a9a9;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
     color: white;
-    font-size: 18px;
-    border: 0;
-    outline: none;
-    cursor: pointer; 
-    width: 150px;
-    margin: 20px auto 0;
-    border-radius: 30px;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #ff994f, #fa6d86);
+    cursor: pointer;
+}
+
+.contact-left button img {
+    height: 15px;
+}
+
+.contact-right img {
+    width: 500px;
+}
+
+@media (max-width: 800px) {
+    .contact-input{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
+    }
 }

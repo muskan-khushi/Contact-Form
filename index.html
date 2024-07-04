@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
-</head>
-<body>
-    <script src= "https://smtpjs.com/v3/smtp.js"></script>
-    <script src="script.js"></script>
-    
-    <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <h3>GET IN TOUCH</h3>
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Email ID" required>
-            <input type="text" id="phone" placeholder="Contact Number" required>
-
-            <textarea rows="4" id="message" placeholder="How can we help you?"></textarea>
-
-            <button type="submit">Send</button>
-        </form>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contact-container">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="contact-left"
+      >
+        <div class="contact-left-title">
+          <h2>Get in Touch</h2>
+          <hr />
+        </div>
+        <input
+          type="hidden"
+          name="access_key"
+          value="98e8d5b3-5d85-418b-9128-ee4a4f2fc27f"
+        />
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          class="contact-input"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email ID"
+          class="contact-input"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          class="contact-input"
+          required
+        ></textarea>
+        <button type="submit">
+          Submit <img src="assets/arrow_icon.png" alt="" />
+        </button>
+      </form>
+      <div class="contact-right">
+        <img src="assets/right_img.png" alt="" />
+      </div>
     </div>
-</body>
+  </body>
 </html>
