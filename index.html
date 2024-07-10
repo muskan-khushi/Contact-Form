@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="contact-container">
-      <form
-        action="https://api.web3forms.com/submit"
-        method="POST"
-        class="contact-left"
-      >
-        <div class="contact-left-title">
-          <h2>Contact Us</h2>
-          <hr />
+        <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-left"
+        >
+            <div class="contact-left-title">
+                <h2>Contact Us</h2>
+                <hr />
+            </div>
+            <input
+                type="hidden"
+                name="access_key"
+                value="98e8d5b3-5d85-418b-9128-ee4a4f2fc27f"
+            />
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                class="contact-input"
+                required
+            />
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email ID"
+                class="contact-input"
+                required
+            />
+            <textarea
+                name="message"
+                placeholder="Your Message"
+                class="contact-input"
+                required
+            ></textarea>
+            <button type="submit">
+                Submit <img src="assets/arrow_icon.png" alt="" />
+            </button>
+        </form>
+        <div class="contact-right">
+            <img src="assets/right_img.png" alt="" />
         </div>
-        <input
-          type="hidden"
-          name="access_key"
-          value="98e8d5b3-5d85-418b-9128-ee4a4f2fc27f"
-        />
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          class="contact-input"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email ID"
-          class="contact-input"
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          class="contact-input"
-          required
-        ></textarea>
-        <button type="submit">
-          Submit <img src="assets/arrow_icon.png" alt="" />
-        </button>
-      </form>
-      <div class="contact-right">
-        <img src="assets/right_img.png" alt="" />
-      </div>
     </div>
-  </body>
+</body>
 </html>
+
+
+
+
