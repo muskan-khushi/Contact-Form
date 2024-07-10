@@ -28,6 +28,8 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     animation: fadeIn 1.5s ease-in-out;
+    max-width: 1000px;
+    width: 90%;
 }
 
 @keyframes fadeIn {
@@ -46,7 +48,8 @@ body {
     flex-direction: column;
     align-items: start;
     gap: 20px;
-    width: 400px;
+    width: 50%;
+    max-width: 400px;
 }
 
 .contact-left-title h2 {
@@ -136,7 +139,7 @@ body {
 }
 
 .contact-right img {
-    width: 500px;
+    width: 400px;
     animation: slideIn 2s ease-in-out;
 }
 
@@ -151,13 +154,58 @@ body {
     }
 }
 
-@media (max-width: 800px) {
-    .contact-input {
-        width: 80vw;
+@media (max-width: 1200px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
     }
+
+    .contact-left {
+        width: 90%;
+    }
+
+    .contact-right img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-left {
+        width: 100%;
+    }
+
+    .contact-input {
+        width: 100%;
+    }
+
     .contact-right {
         display: none;
     }
 }
+
+@media (max-width: 600px) {
+    .contact-left-title h2 {
+        font-size: 30px;
+    }
+
+    .contact-left button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .contact-left button img {
+        height: 12px;
+    }
+
+    .contact-left textarea {
+        height: 120px;
+    }
+}
+
 
 
